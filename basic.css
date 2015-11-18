@@ -1,0 +1,29 @@
+body {
+    background-color: #b0c4de;
+}
+h1
+{
+	font-size: 200%;
+	text-align:center;
+}
+p
+{
+	text-align:center;
+}
+.center
+{
+	text-align: center;
+	margin-left:30%;
+	margin-right:30%;
+}
+.left 
+{
+	text-align: left;
+	margin-left: 30%;
+}
+.right
+{
+	text-align: right;
+	margin-left: 20%;
+	margin-right: 10%;
+}
