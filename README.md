@@ -1,2 +1,2 @@
-# FunicsPhoneApp
-This repository will be devoted to the Funics Phone Application
+# Funics
+CS353 Team Project. Assistive web based appilication
