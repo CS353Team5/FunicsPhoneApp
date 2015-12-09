@@ -205,7 +205,7 @@ $num_rows = 0; //We set the value of num of rows to zero.
 
 											<!--Starting point of sign up system-->
 	<form class="cmxform" id="signupForm" method="post" action="home.php" style="width: 50%; margin:auto;">
-			<fieldset>
+			<center><fieldset>
 			<div class="col-lg-12 text-center">
                     <h2>Register Now!</h2>
                     <hr class="star-primary">
@@ -230,14 +230,9 @@ $num_rows = 0; //We set the value of num of rows to zero.
 				<label for="phone">Phone	</label>
 				<input id="phone" name="phone" type="text">
 			</p>
-			<p>
-				<label for="dob">Gender	</label>
-				<input type="text" id="gender" name="gender">
-			</p>
-
 
 			<p>
-				<label for="dob">Age	</label>
+				<label for="dob">Age</label>
 				<input type="text" id="age" name="age">
 			</p>
 
@@ -253,11 +248,15 @@ $num_rows = 0; //We set the value of num of rows to zero.
 				<label for="confirm_password">Confirm password	</label>
 				<input id="confirm_password" name="confirm_password" type="password">
 			</p>
-			
 			<p>
-				<input class="submit" type="submit" value="Sign Up" name="register" style="width:15%; margin-left:270px; color:white; background-color:#2c3e50; border-radius: 15px;">
+				<input type="radio" id="gender" name="gender" value="male" checked>Male
+				<input type="radio" id="gender" name="gender" value="female" checked>Female
 			</p>
-		</fieldset>
+
+			<p>
+				<input class="submit" type="submit" value="Sign Up" name="register" style="width:130px; color:white; background-color:#2c3e50; border-radius: 15px;">
+			</p>
+		</fieldset></center>
 	</form>
 											<!--End point of sign up system-->
 	</div>

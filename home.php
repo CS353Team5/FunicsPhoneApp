@@ -152,52 +152,205 @@ $email = $_POST['email'];
 <!DOCTYPE html>
 <html>
 <head>
-<style>
 
-</style>
-	<title>Home</title>
-	
-	<!--Links to CSS and JS-->
-	<link rel="stylesheet" href="basic.css"> <!-- CSS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Funics</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 	<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
-	<!--<script language="javascript" type="text/javascript" src="js/slideshow.js"></script>-->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
 
 <body>
-    <h1> Welcome <?php 
-	echo $_SESSION['isLogged'];
-	?></h1>
-	<h1>FUNICS!!</h1> <!--Logo-->
-	<p>Welcome to FUNICS!<br>
-	An online learning resource for those having difficulty with speech and pronunciation. <br>
-	Please feel free to try out our app now, or make an account for access to extra features.<br></p>
 	
 	
-	<br>
-	
-	<textarea id= "text" rows="10" cols="40" class="center">
-Please enter the text you'd like to hear back in this box!</textarea>	
-	
-	<select id="speed" class = "left">
-	<option value = "1.5">Fast</option>
-	<option value = "1.0">Normal</option>
-	<option value = "0.5">Slow</option>
-	</select>
-	
-	<br>
-	<br>
-	<input
-		onclick='responsiveVoice.speak(document.getElementById("text").value,"UK English Female",{rate: document.getElementById("speed").value});'
-		type="button" 
-		value="Play" 
-		class= "left"
-	/>
-	<input
-		
-		onclick='responsiveVoice.cancel();'
-		type="button"
-		value="Stop"
-	/>
+	<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.php">Funics</a>
+            </div>
 
-	<br>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+					<a href="index.php">Log out</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+	
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-text">
+                        <span class="name" style="font-size:50px">Welcome to your page!</span>
+                        <hr class="star-primary">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+	<!-- TextArea Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1>Start Learning!</h1>
+                    <hr class="star-primary">
+                </div>
+            </div>
+			<div>
+			<center>
+			<form> 
+				Enter your phrase here:<br>
+				<input type="text" name="text" id="text">
+				<br>
+				
+				<select id="speed" class = "left">
+				
+				<option value = "1.5">Fast</option>
+				<option value = "1.0" selected="selected">Normal</option>
+				<option value = "0.5">Slow</option>
+
+				
+				</select>
+			
+				<br>
+				<input 
+					onclick='responsiveVoice.speak(document.getElementById("text").value,"UK English Female",{rate: document.getElementById("speed").value});'
+					type="button" 
+					value="Play" 
+					name="play" 
+					style="width:130px; margin-left:0px; color:white; background-color:#2c3e50; border-radius: 15px;">
+				<input
+					onclick='responsiveVoice.cancel();'
+					type="button" 
+					value="Stop" 
+					name="stop" 
+					style="width:130px; margin-left:10px; color:white; background-color:#2c3e50; border-radius: 15px;">
+				<input
+					onclick =""
+					type="button" 
+					value="Save" 
+					name="save" 
+					style="width:130px; margin-left:10px; color:white; background-color:#2c3e50; border-radius: 15px;"><!--onclick='save phrase'-->
+				
+				</form>
+				</center>
+			</div>
+        </div>
+    </section>
+	<section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Recent Searches:</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <p>See your most recent searches here:</p>
+				<ul class="recent">
+                    <li>
+                        Search 1
+                    </li>
+                    <li>
+						Search 2
+                    </li>
+                    <li>
+                        Search 3
+                    </li>
+                </ul>	
+        </div>
+    </section>
+	
+	<!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+                        <p>Maynooth University<br>Maynooth, Co. Kildare</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+					<div class="footer-col col-md-4">
+                        <h3>Contact Us</h3>
+                        <p>Email:   funics@notreal.com</p>
+						<p>Phone:   12 345 6789</p><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Funics 2015
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+</html>
